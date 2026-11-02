@@ -1,15 +1,20 @@
-//Saying the temperature entered is Cold or Hot amd then converting teh temp into Fahrenheit.
+//checking if the weather entered by the user is from hot, cold or mild
 #include <stdio.h>
 
-int main() {
-    float temp;
+int main(){
+    int temperature;
 
-    printf("Enter the temperature: ");
-    scanf("%f", &temp);
+    printf("Enter a temperature: ");
+    scanf("%d", &temperature);
 
-    printf("%s\n", (temp >= 25.0) ? "Hot" : "Cold");
-    
-    printf("Temperature in Fahrenheit: %.2f\n", temp * 9.0 / 5.0 + 32.0);
-
+    if (temperature < 10){
+        printf("Cold\n");
+    }
+    else if (temperature >= 10 && temperature <= 24) {
+        printf("Mild\n");
+    } 
+    else{
+        printf("Hot\n");
+    }
     return 0;
 }
