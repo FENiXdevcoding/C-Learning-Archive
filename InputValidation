@@ -1,0 +1,19 @@
+//making the user input a number between 1 and 100 until a valid
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    do{
+        printf("Enter a number between 1 and 100: ");
+        scanf("%d", &num);
+        
+        if (num < 1 || num > 100) {
+            printf("Invalid input. Please try again.\n\n");// we used two \n\n to create a space fromt he text
+        }
+    }while (num < 1 || num > 100);
+
+    printf("Value accepted!");
+
+    return 0;
+}
